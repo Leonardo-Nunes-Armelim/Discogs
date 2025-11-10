@@ -74,6 +74,10 @@ Os dados coletados são estruturados e armazenados no formato JSONL, o que permi
     cd discogsscraper
     scrapy crawl discogs
 
+Após executar o comando "scrapy crawl discogs" o arquivo "albums.jsonl" com as informações do site vai ficar salvo no caminho da pasta abaixo.
+
+Discogs > discogsscraper > albums.jsonl
+
 ## Como os testes unitários
     git clone https://github.com/Leonardo-Nunes-Armelim/Discogs.git
     cd Discogs
