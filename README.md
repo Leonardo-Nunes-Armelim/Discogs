@@ -105,3 +105,11 @@ PLAYWRIGHT_LAUNCH_OPTIONS = {
     "args": ["--disable-blink-features=AutomationControlled", "--start-maximized"],
 }
 ```
+
+## Detalhes do desenvolvimento
+
+O projeto foi desenvolvido na versão 3.10.11 do Python. Caso alguma funcionalidade não funcionar corretamente é recomendado ultilizar a mesma versão do desenvolvida do projeto.
+
+````.python-version
+3.10.11
+```
