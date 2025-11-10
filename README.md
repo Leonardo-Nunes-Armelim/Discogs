@@ -90,3 +90,14 @@ Os dados coletados são estruturados e armazenados no formato JSONL, o que permi
 Como próximos passos, o projeto pode evoluir com a criação de um endpoint para expor os dados coletados pelos spiders, permitindo que sejam enviados diretamente para uma ferramenta de streaming de dados, como o Apache Kafka.
 
 Com essa integração, as informações seriam coletadas e disponibilizadas em tempo real, possibilitando o consumo contínuo por pipelines de engenharia de dados e aplicações de análise e visualização.
+
+## Opções
+
+Se quiser rodar o spider de forma a não mostrar as páginas sendo abertas no navegador é só mudar o campo "headless" para True dentro do arquivo "settings.py"
+
+```python
+PLAYWRIGHT_LAUNCH_OPTIONS = {
+    "headless": True,
+    "args": ["--disable-blink-features=AutomationControlled", "--start-maximized"],
+}
+```
