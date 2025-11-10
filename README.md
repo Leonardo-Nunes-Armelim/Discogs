@@ -70,6 +70,7 @@ Os dados coletados são estruturados e armazenados no formato JSONL, o que permi
     .\venv\Scripts\activate.bat
     python.exe -m pip install --upgrade pip
     pip install -r requirements.txt
+    playwright install chromium
     cd discogsscraper
     scrapy crawl discogs
 
@@ -80,6 +81,7 @@ Os dados coletados são estruturados e armazenados no formato JSONL, o que permi
     .\venv\Scripts\activate.bat
     python.exe -m pip install --upgrade pip
     pip install -r requirements.txt
+    playwright install chromium
     cd discogsscraper
     pytest -k "test"
 
