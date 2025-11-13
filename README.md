@@ -63,7 +63,7 @@ Os dados coletados são estruturados e armazenados no formato JSONL, o que permi
 }
 ```
 
-## Como coletar os dados em JSONL
+## Configurando projeto para uso
     git clone https://github.com/Leonardo-Nunes-Armelim/Discogs.git
     cd Discogs
     python -m venv ./venv
@@ -72,21 +72,15 @@ Os dados coletados são estruturados e armazenados no formato JSONL, o que permi
     pip install -r requirements.txt
     playwright install chromium
     cd discogsscraper
+
+## Como coletar os dados em JSONL
     scrapy crawl discogs
 
 Após executar o comando "scrapy crawl discogs" o arquivo "albums.jsonl" com as informações do site vai ficar salvo no caminho da pasta abaixo.
 
 Discogs > discogsscraper > albums.jsonl
 
-## Como os testes unitários
-    git clone https://github.com/Leonardo-Nunes-Armelim/Discogs.git
-    cd Discogs
-    python -m venv ./venv
-    .\venv\Scripts\activate.bat
-    python.exe -m pip install --upgrade pip
-    pip install -r requirements.txt
-    playwright install chromium
-    cd discogsscraper
+## Como rodar os testes unitários
     pytest -k "test"
 
 ## Próximos passos
