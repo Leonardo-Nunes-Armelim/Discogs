@@ -37,11 +37,14 @@ class DiscogsSpider(scrapy.Spider):
         )
 
     def parse_album(self, response):
-        links = response.css('a.search_result_title::attr(href)').getall()
+        links = response.xpath('//h1[normalize-space()="Exploring Rock"]/following::a[starts-with(@href, "/master/")]/@href').getall()
 
+        pivo = []
         with open("links.jsonl", "a", encoding="utf-8") as f:
             for l in links:
-                f.write(json.dumps({"link": l}, ensure_ascii=False) + "\n")
+                if l not in pivo:
+                    f.write(json.dumps({"link": l}, ensure_ascii=False) + "\n")
+                    pivo.append(l)
         f.close()
 
         # Le links ainda não acessados
